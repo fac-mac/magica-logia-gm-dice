@@ -28,6 +28,8 @@ module.exports = {
     'import/extensions': ['error', {
       ts: 'never',
     }],
+    indent: 'off',
+    '@typescript-eslint/indent': ['error', 2],
   },
   overrides: [
     {

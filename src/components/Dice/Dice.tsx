@@ -2,10 +2,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import styles from './Dice.module.scss';
-
-export type DiceNumberType = 1 | 2 | 3 | 4 | 5 | 6;
-type AdditionalDiceType = 'protect' | 'back';
-export type DiceType = DiceNumberType | AdditionalDiceType;
+import { DiceType } from '../../types/dice';
 
 interface DiceProps {
   content: DiceType;

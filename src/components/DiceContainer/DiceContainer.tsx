@@ -1,6 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import Dice, { DiceNumberType, DiceType } from '../Dice/Dice';
+import { DiceNumberType, DiceType } from '../../types/dice';
+import Dice from '../Dice/Dice';
 import styles from './DiceContainer.module.scss';
 
 interface DiceContainerProps {
