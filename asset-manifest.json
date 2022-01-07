@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/magica-logia-gm-dice/static/css/main.1a3eedcb.css",
+    "main.js": "/magica-logia-gm-dice/static/js/main.d1ae3e26.js",
+    "index.html": "/magica-logia-gm-dice/index.html",
+    "main.1a3eedcb.css.map": "/magica-logia-gm-dice/static/css/main.1a3eedcb.css.map",
+    "main.d1ae3e26.js.map": "/magica-logia-gm-dice/static/js/main.d1ae3e26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a3eedcb.css",
+    "static/js/main.d1ae3e26.js"
+  ]
+}
