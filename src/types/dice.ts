@@ -4,5 +4,5 @@ export type DiceType = DiceNumberType | AdditionalDiceType;
 
 export interface RollResultType {
   dices: DiceType[],
-  boost: DiceNumberType[],
+  boost?: DiceNumberType[],
 }
