@@ -81,7 +81,7 @@ function App() {
   };
 
   return (
-    <main className={styles.main}>
+    <>
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -235,7 +235,7 @@ function App() {
           )}
         </div>
       </div>
-    </main>
+    </>
   );
 }
 

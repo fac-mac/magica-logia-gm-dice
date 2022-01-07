@@ -2,9 +2,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (min-width: 768px) {
-    height: 100vh;
-  }
+  height: 100%;
 }
 
 .container {
