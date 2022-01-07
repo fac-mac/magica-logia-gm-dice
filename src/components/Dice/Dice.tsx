@@ -3,11 +3,12 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './Dice.module.scss';
 
-type DiceNumberType = 1 | 2 | 3 | 4 | 5 | 6;
+export type DiceNumberType = 1 | 2 | 3 | 4 | 5 | 6;
 type AdditionalDiceType = 'protect' | 'back';
+export type DiceType = DiceNumberType | AdditionalDiceType;
 
 interface DiceProps {
-  content: DiceNumberType | AdditionalDiceType;
+  content: DiceType;
 }
 
 function Dice({ content }: DiceProps) {
