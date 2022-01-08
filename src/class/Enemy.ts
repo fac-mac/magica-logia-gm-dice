@@ -13,7 +13,7 @@ function getRandomDice(pool?: DiceNumberType[], isExclusive: boolean = false): D
     }
     return pool[Math.floor(Math.random() * pool.length)];
   }
-  return (Math.floor(Math.random() * (5)) + 1) as DiceNumberType;
+  return (Math.floor(Math.random() * (6)) + 1) as DiceNumberType;
 }
 
 export default class Enemy {
