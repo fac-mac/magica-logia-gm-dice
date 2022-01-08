@@ -3,7 +3,7 @@ import { ModeType, TurnType } from '../types/enemy';
 import ReadingCircle from './ReadingCircle';
 
 function getRandomDice(pool?: DiceNumberType[], isExclusive: boolean = false): DiceNumberType {
-  if (pool && pool.length > 0) {
+  if (pool && pool.length > 0 && pool.length < 6) {
     if (isExclusive) {
       let number = getRandomDice();
       while (pool.includes(number)) {
@@ -60,7 +60,7 @@ export default class Enemy {
           dices.push(getRandomDice());
         }
       } else {
-        const isExclusive = (Math.random() < 0.7
+        const isExclusive = (Math.random() < 0.5
           && readingCircle.booksField.length > 0); // true면 장서 영역 제외
         if (Math.random() < 0.5) { // 한 다이스로 밀기
           const result = getRandomDice(readingCircle.booksField, isExclusive);

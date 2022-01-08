@@ -4,6 +4,6 @@ export default class ReadingCircle {
   booksField: DiceNumberType[] = [];
 
   constructor({ booksField }: ReadingCircle) {
-    this.booksField.concat(booksField);
+    booksField.forEach((field) => this.booksField.push(field));
   }
 }
