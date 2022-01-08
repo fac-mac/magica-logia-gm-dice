@@ -223,8 +223,7 @@ function App() {
             <FormControlLabel value="defence" control={<Radio />} label="방어" />
             <FormControlLabel value="offence" control={<Radio />} label="공격" />
           </RadioGroup>
-
-          <Button variant="contained" type="button" className={styles.margin} onClick={handleRoll}>ROLL!</Button>
+          <Button variant="contained" type="button" sx={{ marginTop: '10px' }} onClick={handleRoll}>ROLL!</Button>
         </div>
         <div>
           {(isRolled && roll) && (
