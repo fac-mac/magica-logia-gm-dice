@@ -50,3 +50,17 @@
 .margin {
   margin-top: 5px;
 }
+
+.title {
+  margin-bottom: 0;
+}
+
+.madeIn {
+  margin: 0;
+  margin-bottom: 1em;
+  font-size: small;
+  color: #666;
+  a {
+    color: #666;
+  }
+}

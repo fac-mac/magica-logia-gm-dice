@@ -95,7 +95,12 @@ function App() {
       />
       <div className={styles.container}>
         <div>
-          <h1>마기카로기아 GM대리</h1>
+          <h1 className={styles.title}>마기카로기아 GM대리</h1>
+          <p className={styles.madeIn}>
+            made in
+            {' '}
+            <a href="https://machine-factory.vercel.app/">🏭기계공장</a>
+          </p>
           <FormLabel component="legend">GM 성향 결정</FormLabel>
           <RadioGroup
             aria-label="gm-play-bias"
