@@ -2,6 +2,7 @@
   "name": "magica-logia-gm-dice",
   "homepage": "https://fac-mac.github.io/magica-logia-gm-dice",
   "version": "0.1.0",
+  "packageManager": "pnpm@8.5.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -9,10 +10,6 @@
     "@mui/material": "^5.2.7",
     "@mui/system": "^5.2.6",
     "@storybook/react": "^6.5.0-alpha.10",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
