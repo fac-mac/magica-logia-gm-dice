@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import {
@@ -35,6 +35,7 @@ const initialInfo: InfoType = {
 };
 
 function App() {
+  const resultRef = useRef<HTMLDivElement | null>(null);
   const [isRolled, setRolled] = useState<boolean>(false);
   const [roll, setRoll] = useState<RollResultType | null>(null);
   const [info, setInfo] = useState<InfoType>(initialInfo);
@@ -48,6 +49,7 @@ function App() {
       const readingCircle = new ReadingCircle({ ...info.readingCircle });
       const enemy = new Enemy(mode, offence, defence, boost);
       setRoll(enemy.roll(info.turn, readingCircle));
+      resultRef.current?.scrollIntoView({ behavior: 'smooth' });
     } catch (e) {
       toast.info(e.message);
     }
@@ -230,14 +232,12 @@ function App() {
           </RadioGroup>
           <Button variant="contained" type="button" sx={{ marginTop: '10px' }} onClick={handleRoll}>ROLL!</Button>
         </div>
-        <div>
-          {(isRolled && roll) && (
-            <>
-              <h2>Roll Result</h2>
-              <DiceContainer dices={roll.dices} boost={roll.boost} />
-            </>
-          )}
-        </div>
+        {(isRolled && roll) && (
+          <div ref={resultRef}>
+            <h2>Roll Result</h2>
+            <DiceContainer dices={roll.dices} boost={roll.boost} />
+          </div>
+        )}
       </div>
     </>
   );
