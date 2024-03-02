@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import {
   FormControlLabel, FormGroup, FormLabel, Radio, RadioGroup, TextField,
+  Tooltip,
 } from '@mui/material';
 import { toast, ToastContainer } from 'react-toastify';
 import DiceContainer from './components/DiceContainer/DiceContainer';
@@ -27,7 +28,7 @@ const initialInfo: InfoType = {
     booksField: [],
   },
   enemy: {
-    mode: 'random',
+    mode: 'soft',
     offence: 3,
     defence: 3,
     boost: 0,
@@ -113,9 +114,20 @@ function App() {
             onChange={handleModeChange}
             row
           >
-            <FormControlLabel value="random" control={<Radio />} label="랜덤" />
-            <FormControlLabel value="severe" control={<Radio />} label="진심" />
             <FormControlLabel value="soft" control={<Radio />} label="상냥함" />
+            <FormControlLabel value="severe" control={<Radio />} label="진심" />
+            <div className={styles.horizontal}>
+              <FormControlLabel
+                value="random"
+                control={(
+                  <Radio />
+                )}
+                label="기분파"
+              />
+              <Tooltip title="매 굴림마다 상냥함/진심 중에서 랜덤으로 결정됩니다">
+                <button type="button" className={styles.infoIcon}>i</button>
+              </Tooltip>
+            </div>
           </RadioGroup>
           <FormLabel component="legend" className={styles.margin}>분과회 장서 영역</FormLabel>
           <FormGroup row className={styles.tray}>

@@ -64,3 +64,24 @@
     color: #666;
   }
 }
+
+.infoIcon {
+  all: unset;
+  color: gray;
+  width: 13px;
+  height: 13px; 
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid gray;
+  border-radius: 9999px;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
